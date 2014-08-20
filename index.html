@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="kramnorth" ng-controller="globalCtrl">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Mark Harding's 21st | {{page.title}}</title>
+        
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/screen.css">
+         
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+		
+    </head>
+    <body>
+		<video id="vid"  autoplay loop>
+			<source src="videos/1080p.mp4.mov" type="video/mp4">
+			<source src="videos/1080p.webm" type="video/webm">
+		</video>
+		<div class="overlay {{page.page}}"></div>
+    	<div class="hero {{page.page}}">
+    		<div class="inner">
+	    		<header>
+	    			<div class="inner">
+	    				<a href="#home">
+	    					<h1>MARK <span class="spacer">&nbsp;&nbsp;</span> HARDING</h1>
+	    					<h2>21ST BIRTHDAY</h2>
+	    				</a>
+	    				<div class="menu">
+	    					<div class="item {{page.active('when')}}">
+	    						<a href="#when">When?</a>
+	    					</div>
+	    					<div class="item {{page.active('where')}}" ng-click="page.page = 'where'">
+	    						<a href="#where">Where?</a>
+	    					</div>
+	    					<div class="item {{page.active('menu')}}" ng-click="page.page = 'menu'">
+	    						<a href="#menu">Menu</a>
+	    					</div>
+	    					<div class="item {{page.active('rsvp')}}" >
+	    						<a href="#menu">RSVP</a>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</header>
+	    
+				<div class="content">
+					<div class="inner" ng-view></div>
+				</div>
+	         
+	         	<footer>
+	         		<div class="inner">
+	         		
+	         		</div>
+	         	</footer>
+	        </div>
+		</div>
+
+    </body>
+</html>

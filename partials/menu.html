@@ -1,0 +1,45 @@
+<div class="food-menu">
+	<div class="helper">
+		<p>TIP: Select your meal by clicking on the items below.</p>
+	</div>
+	<div class="starters">
+		<h2>Starters</h2>
+		<div class="options" ng-repeat="dish in menu.starters" ng-click="selectDish('starters', dish)" ng-class="{selected : isSelected(dish)}">
+			<div class="select">
+				+
+			</div>
+			<div class="dish">
+				<h3>{{dish.title}}</h3>
+				<p>{{dish.info}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="mains">
+		<h2>Mains</h2>
+		<div class="options" ng-repeat="dish in menu.mains" ng-click="selectDish('mains', dish)" ng-class="{selected : isSelected(dish)}">
+			<div class="select">
+				+
+			</div>
+			<div class="dish">
+				<h3>{{dish.title}}</h3>
+				<p>{{dish.info}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="pudding">
+		<h2>Pudding</h2>
+		<div class="options" ng-repeat="dish in menu.pudding" ng-click="selectDish('pudding', dish)" ng-class="{selected : isSelected(dish)}">
+			<div class="select">
+				+
+			</div>
+			<div class="dish">
+				<h3>{{dish.title}}</h3>
+				<p>{{dish.info}}</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="submit">
+		SUBMIT
+	</div>
+</div>

@@ -1,0 +1,67 @@
+/**
+ * 	Normal screen
+ */
+
+
+/**
+ * 	Screen size, less than 800px wide
+ */
+@media all 
+and (min-width : 320px)
+and (max-width : 800px) {
+	
+	#vid{
+		left:-850px;
+	}
+	
+	header .logo{
+		width:152px;
+	}
+	
+	header .menu{
+		width:100%;
+		margin:32px 0 0;
+	}
+	header .menu > .item{
+		
+	}
+	header .menu > .item > a{
+		padding:0;
+	}
+
+	.content{
+		margin-top:0;
+		width:90%;
+		overflow:hidden;
+	} 
+
+}
+/**
+ * 	iOS doesn't play nice with our video bg...  a few hacks
+ */
+@media only screen and (device-width: 768px) 
+or (device-width: 320px){
+	
+	body{
+		background: url("../pictures/splash.png") no-repeat top center;
+		background-size: 1500px 1024px;
+		background-position:fixed;
+	}
+
+	#vid{
+		display:none;
+	}
+	header h1{
+		font-weight:100;
+
+	}
+	header h2{
+		font-weight:400;
+	}
+	
+	.content h2{
+		font-weight:400;	
+	}
+	
+ }
+
