@@ -6,9 +6,9 @@ threadsafe: true
 
 handlers:
 # SERVER STATIC HTMLS AND CSS
-- url: /(.*\.(htm|html|css|js))$
+- url: /(.*\.(htm|html|css|js|mp4|mov|webm))$
   static_files: \1
-  upload: .*\.(htm|html|css|js)$
+  upload: .*\.(htm|html|css|js|mp4|mov|webm)$
   application_readable: true
 
 # Serve images as static resources.
