@@ -21,5 +21,8 @@ handlers:
 - url: /(.+\.php)$
   script: \1
 
+- url: /
+  script: index.html
+
 - url: /(.+)?/?
   script: index.html
