@@ -22,5 +22,5 @@ handlers:
   script: \1
 
 - url: /(.*)/
-  static_files: \1/index.html
+  static_files: index.html
   upload: .*/index\.html
