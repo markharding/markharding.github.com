@@ -23,9 +23,9 @@ kramnorth.config(['$routeProvider', '$httpProvider',
         templateUrl: 'partials/menu.html',
         controller: 'MenuCtrl'
       }).
-      when('/rsvp', {
-        templateUrl: 'partials/rsvp.html',
-        controller: 'RSVPCtrl'
+      when('/guestlist', {
+        templateUrl: 'partials/guestlist.html',
+        controller: 'GuestCtrl'
       }).
       otherwise({
       	redirectTo: '/'
