@@ -10,6 +10,7 @@ use google\appengine\api\cloud_storage\CloudStorageTools;
 
 //file_put_contents('gs://vocal-territory-679.appspot.com/hello.txt', 'Hello');
 $data = json_decode( file_get_contents('php://input'), true );
+$data = $data['data'];
 $json = json_encode($data);
  
 try{
@@ -23,7 +24,7 @@ try{
   $body = <<<BODY
   	Mark, you have a new order. 
   	
-  	\n \n
+  	\n 
   	
   	$json
 BODY;
