@@ -8,6 +8,8 @@ handlers:
 # SERVER STATIC HTMLS AND CSS
 - url: /(.*\.(htm|html|css|js))$
   static_files: \1
+  upload: .*\.(htm|html|css|js)$
+  application_readable: true
 
 # Serve images as static resources.
 - url: /(.+\.(gif|png|jpg))$
