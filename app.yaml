@@ -7,9 +7,7 @@ threadsafe: true
 handlers:
 # SERVER STATIC HTMLS AND CSS
 - url: /(.*\.(htm|html|css|js))$
-  static_files: wordpress/\1
-  upload: wordpress/.*\.(htm|html|css|js)$
-  application_readable: true
+  static_files: \1
 
 # Serve images as static resources.
 - url: /(.+\.(gif|png|jpg))$
