@@ -150,9 +150,10 @@ kramnorthControllers.controller('MenuCtrl', ['$scope', '$http', 'page',
                 url: "order.php",
                 data: {
                     data :  {
+                    	name : $scope.name,
                     	starters : $scope.selectedDish['starters'],
-                    	main : $scope.selectedDish['main'],
-                    	pudding : scope.selectedDish['pudding']
+                    	mains : $scope.selectedDish['mains'],
+                    	pudding : $scope.selectedDish['pudding']
                     }
                 }
              })
