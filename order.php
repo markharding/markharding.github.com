@@ -26,7 +26,7 @@ try{
   	$data
 BODY;
   
-  $message->setTextBody("Hello, world!");
+  $message->setTextBody($body);
  // $message->addAttachment('image.jpg', 'image data', $image_content_id);
   $message->send();
 } catch (InvalidArgumentException $e) {}
