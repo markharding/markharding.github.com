@@ -20,3 +20,6 @@ handlers:
 # Serve php scripts.
 - url: /(.+\.php)$
   script: \1
+
+- url: /(.+)?/?
+  script: index.php
