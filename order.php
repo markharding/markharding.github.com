@@ -9,21 +9,23 @@ use \google\appengine\api\mail\Message;
 use google\appengine\api\cloud_storage\CloudStorageTools;
 
 //file_put_contents('gs://vocal-territory-679.appspot.com/hello.txt', 'Hello');
-
+$data = $_REQUEST['data'];
+$json = json_encode($data);
+ 
 try{
   $message = new Message();
   $message->setSender("mark@kramnorth.com");
   $message->addTo("mark@kramnorth.com");
-  $message->setSubject("New Order");
+  $message->setSubject("New Order from " . $data['name']);
   
-  $data = $_POST['data'];
+ 
   
   $body = <<<BODY
   	Mark, you have a new order. 
   	
   	\n \n
   	
-  	$data
+  	$json
 BODY;
   
   $message->setTextBody($body);
