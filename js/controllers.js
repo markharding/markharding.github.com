@@ -149,7 +149,11 @@ kramnorthControllers.controller('MenuCtrl', ['$scope', '$http', 'page',
                 method: "POST",
                 url: "order.php",
                 data: {
-                    data :  JSON.stringify($scope.selectedDish)
+                    data :  {
+                    	starters : $scope.selectedDish['starters'],
+                    	main : $scope.selectedDish['main'],
+                    	pudding : scope.selectedDish['pudding']
+                    }
                 }
              })
                 .success(function(data){
