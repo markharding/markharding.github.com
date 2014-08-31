@@ -9,7 +9,7 @@ use \google\appengine\api\mail\Message;
 use google\appengine\api\cloud_storage\CloudStorageTools;
 
 //file_put_contents('gs://vocal-territory-679.appspot.com/hello.txt', 'Hello');
-$data = json_decode( file_get_contents('php://input') );
+$data = json_decode( file_get_contents('php://input'), true );
 $json = json_encode($data);
  
 try{
