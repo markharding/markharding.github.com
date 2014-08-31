@@ -21,6 +21,6 @@ handlers:
 - url: /(.+\.php)$
   script: \1
 
-- url: /(.*)/
+- url: /
   static_files: index.html
-  upload: .*/index\.html
+  upload: index.html
