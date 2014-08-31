@@ -2,6 +2,7 @@ application: vocal-territory-679
 version: 1
 runtime: php
 api_version: 1
+threadsafe: true
 
 handlers:
 # Serve images as static resources.
