@@ -3,9 +3,10 @@ this is a test <?php echo 'and it works'; ?>
 <?php 
 
 use \google\appengine\api\mail\Message;
+use google\appengine\api\cloud_storage\CloudStorageTools;
 
 file_put_contents('gs://vocal-territory-679.appspot.com/hello.txt', 'Hello');
-var_dump(file_get_contents('gs://vocal-territory-679.appspot.com/hello.txt')); 
+var_dump(CloudStorageTools::serve('gs://vocal-territory-679.appspot.com/hello.txt')); 
 
 try
 {
