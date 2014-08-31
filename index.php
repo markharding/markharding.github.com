@@ -4,8 +4,8 @@ this is a test <?php echo 'and it works'; ?>
 
 use \google\appengine\api\mail\Message;
 
-file_put_contents('gs://my_bucket/hello.txt', 'Hello');
-var_dump(file_get_contents('gs://my_bucket/hello.txt')); 
+file_put_contents('gs://vocal-territory-679.appspot.com/hello.txt', 'Hello');
+var_dump(file_get_contents('gs://vocal-territory-679.appspot.com/hello.txt')); 
 
 try
 {
