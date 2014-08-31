@@ -77,8 +77,8 @@ kramnorthControllers.controller('MenuCtrl', ['$scope', '$http', 'page',
 	$scope.menu = {
 		starters : [
 			{
-				title: 'Mozzerella and Sun blushed Tomato Salad (v)(g)',
-				info: "Dressed with a lime vinagerette"
+				title: 'Mozzarella and Sun blushed Tomato Salad (v)(g)',
+				info: "Dressed with a lime vinaigrette"
 			},
 			{
 				title: 'Traditional Prawn Coctail',
@@ -140,9 +140,26 @@ kramnorthControllers.controller('MenuCtrl', ['$scope', '$http', 'page',
     			alert('Sorry, please select a dish for each of the three courses above');
     			return false;
     		}
+    		
+    		
+               	
     	}
     	
-    	alert('Cheers '+ $scope.name);
+    	$http({
+                method: "POST",
+                url: "order.php",
+                data: {
+                    data :  $scope.selectedDish
+                }
+             })
+                .success(function(data){
+                		alert('Thanks ' + $scope.name + ', we\'ll be in touch to confirm soon');
+                })
+                .error(function(data){
+                		alert('Sorry ' + $scope.name + ', something went wrong');
+               	});
+    	
+    	
     };
   }
 ]);
