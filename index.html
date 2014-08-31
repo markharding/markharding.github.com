@@ -9,8 +9,8 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/screen.css">
          
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+        <script src="vendors/angular.min.js"></script>
+		<script src="vendors/angular-route.min.js"></script>
         <script src="js/app.js"></script>
         <script src="js/filters.js"></script>
         <script src="js/services.js"></script>
@@ -41,8 +41,8 @@
 	    					<div class="item {{page.active('menu')}}" ng-click="page.page = 'menu'">
 	    						<a href="#menu">Menu</a>
 	    					</div>
-	    					<div class="item {{page.active('rsvp')}}" >
-	    						<a href="#menu">RSVP</a>
+	    					<div class="item {{page.active('guestlist')}}" >
+	    						<a href="#guestlist">Guestlist</a>
 	    					</div>
 	    				</div>
 	    			</div>

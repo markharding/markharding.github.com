@@ -63,17 +63,7 @@ kramnorthControllers.controller('WhenCtrl', ['$scope', '$timeout', 'page',
 	var mytimeout = $timeout($scope.onTimeout,1);
   
   }
-]);
-
-/**
- * The contact page controller
- */
-kramnorthControllers.controller('ContactCtrl', ['$scope', 'page',
-  function($scope, page) {
-	page.page = 'contact', 
-	page.title = 'Contact';
-  }
-]);
+])
 
 /**
  * The contact page controller
@@ -142,5 +132,108 @@ kramnorthControllers.controller('MenuCtrl', ['$scope', '$http', 'page',
     	
     	return false;
     };
+    
+    $scope.sendDish = function(){
+    	//check to see that each dish has been selected
+    	for(var course in $scope.menu){
+    		if(!(course in $scope.selectedDish)){
+    			alert('Sorry, please select a dish for each of the three courses above');
+    			return false;
+    		}
+    	}
+    	
+    	alert('Cheers '+ $scope.name);
+    };
+  }
+]);
+
+
+/**
+ * The guestlist
+ */
+kramnorthControllers.controller('GuestCtrl', ['$scope', 'page',
+  function($scope, page) {
+	page.page = 'guestlist', 
+	page.title = 'Guest List';
+	
+	$scope.guests = [
+	
+		{
+			name : 'Mark Harding',
+			status : 'ordered',
+			iconURL : 'https://scontent-a.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1378624_10202355162588841_654547726_n.jpg?oh=b05365479e5639f88a9c20391012f2ba&oe=546CA00A',
+			menu : {
+				starter : 'abc',
+				main : '123',
+				pudding : 'xyz'
+			}
+		},
+		{
+			name : 'Sam Harding'
+		},
+		{
+			name : 'Chris Harding'
+		},
+		{
+			name : 'Viv Harding'
+		},
+		{
+			name : 'Andrew Harding'
+		},
+		{
+			name : 'Neil Stoneley',
+		},
+		{
+			name : 'Irene Stoneley',
+		},
+		{
+			name : 'Jenny Harding'
+		},
+		{
+			name : 'Sarah Davies'
+		},
+		{
+			name : 'Laura Davies'
+		},
+		{
+			name : 'David Harding'
+		},
+		{
+			name : 'Christine Harding'
+		}, 
+		{
+			name : 'Sarah Harding'
+		},
+		
+		{
+			name : 'Robert Harding'
+		},
+		{
+			name : 'Anne Harding'
+		},
+		{
+			name : 'Gemma Harding'
+		},
+		
+		{
+			name : 'Fiona Harding'
+		},
+		{
+			name : 'Bruce Harding'
+		},
+		{
+			name : 'Billy Harding'
+		},
+		
+		{
+			name : 'John Ottman'
+		}, 
+		{
+			name : 'Peggy Ottman'
+		},
+		{
+			name : 'Bill Ottman'
+		}
+	];
   }
 ]);

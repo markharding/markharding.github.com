@@ -1,0 +1,19 @@
+<div class="guestlist">
+	<ul>
+		<li ng-repeat="guest in guests">
+			<div class="icon">
+				<img ng-src="{{guest.iconURL}}"/>
+			</div>
+			<h3>{{guest.name}}</h3>
+			
+			<div class="menu" ng-show="guest.status == 'ordered'">
+				<div class="starter">
+					{{guest.menu.starter}}
+				</div>
+				<div class="main">
+					{{guest.menu.main}}
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
