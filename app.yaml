@@ -22,4 +22,4 @@ handlers:
   script: \1
 
 - url: /(.+)?/?
-  script: index.php
+  script: index.html
