@@ -81,7 +81,7 @@ kramnorthControllers.controller('MenuCtrl', ['$scope', '$http', 'page',
 				info: "Dressed with a lime vinaigrette"
 			},
 			{
-				title: 'Traditional Prawn Coctail',
+				title: 'Traditional Prawn Cocktail',
 				info: "Served with brown bread* and butter"
 			},
 			{
@@ -96,7 +96,7 @@ kramnorthControllers.controller('MenuCtrl', ['$scope', '$http', 'page',
 			},
 			{
 				title: 'Poached Chicken Fillet',
-				info: "Masked with a Julienne of leek, white whine & cream chicken veloute and new potatoes"
+				info: "Masked with a Julienne of leek, white wine & cream chicken veloute and new potatoes"
 			},
 			{
 				title: 'Hake',
