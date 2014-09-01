@@ -28,6 +28,25 @@ and (max-width : 800px) {
 	header .menu > .item > a{
 		padding:0;
 	}
+	
+	.food-menu{
+		
+	}
+	
+	.food-menu .dish{
+		
+	}
+	
+	.food-menu .dish h3{
+		font-size:13px;
+	}
+	.food-menu .dish p{
+		font-size:11px;
+	}
+	
+	.food-menu .submit input[type=text], .food-menu .submit input[type=submit]{
+		font-size:20px;
+	}
 
 	.content{
 		margin-top:0;
